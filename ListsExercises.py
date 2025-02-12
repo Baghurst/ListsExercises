@@ -139,3 +139,48 @@ t1 = ['b','d','c','a','f','h','e','g']
 t1.sort()
 print(t1)
 
+lst = eval(input("Enter list : "))
+length =len(lst)
+min_ele = lst[0]
+min_index = 0
+for i in range(1, length) :
+    if lst[i] < min_ele :
+        min_ele = lst[i]
+        min_index = i
+print("Given list is : ", lst)
+print("The minimum element of the given list is :")
+print(min_ele, "at index", min_index)
+lst = eval(input("Enter list : "))
+length = len(lst)
+mean = sum = 0
+for i in range(0, length) :
+    sum += lst[i]
+mean = sum /length
+print("Given list is :", lst)
+print("The mean of the given list is :", mean)
+lst = eval(input("Enter list :"))
+length = len(lst)
+element = int(input("Enter element to be searched for :"))
+for i in range(0, length) :
+    if element == lst[i] :
+        print(element, "found at index", i)
+        break
+else :               # else of for loop
+    print(element, "not found in given list")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
