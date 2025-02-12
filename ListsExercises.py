@@ -49,61 +49,56 @@ print(lst)
 
 L1, L2 = [1, 2, 3], [1, 2, 3]
 L3 = [1, [2, 3]]
-'''L1 == L2 # Statement seems to have no effect'''
-'''print(L1, L2, L3) # Statement seems to have no effect'''
-'''L1 == L3 # Statement seems to have no effect'''
-'''print(L1,L2,L3) # Statement seems to have no effect'''
+L0 = L1 == L2
+print(L0) 
+a=L1 == L3 
+print("A:",a,L1,L2,L3)
 
 lst1 = [1,3,5]
 lst2 = [6,7,8]
 lst3 = lst1 + lst2
 print(lst3)
 
-"""lst = [10,12,20,22,24,30,32,34] #Not working how it's supposed to.
+lst = [10,12,20,22,24,30,32,34]
 lst2 = lst [3:25]
-print(lst)
+print(lst,lst2)
 lst3 = lst[::3]
-print(lst3)"""
+print(lst3)
 
 lst = [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 ]
 slc1 = lst[5 : 13 :2]
 slc2 = lst[::4]
-sum = avg = 0
+sum_ = avg = 0
 print("Slice 1")
 
 for a in slc1 :
-    sum += a
+    sum_ += a
     print (a, end = ' ')
 print ()
 print ("Sum of elements of slice 1:", sum)
 print ("Slice 2")
-sum = 0
+sum_ = 0
 for a in slc2 :
-    sum += a
+    sum_ += a
     print (a, end = ' ')
 print()
-'''avg = sum / len(slc2) #Incompatible types in assignment
-(expression has type "float", variable has type "int")  [assignment]''' 
+avg = sum_ / len(slc2)
 
 print ("Average of elements of slice 2:", avg)
-
-'''del lst[10] #Not sure if it worked how it's supposed to.
-lst
-print(lst)'''
-
-'''lst = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, #Not working how it's supposed to.
-16,17,18,19,20]
-lst.pop()
-print(lst)
+lst = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+del lst[10] #Not sure if it worked how it's supposed to.
+print("HEllo",lst)
+q=lst.pop(4)
+print("Hello2",lst,"Q:",q)
 lst.pop(10)
-print(lst)'''
+print("Hello3",lst)
 item1 = [1,2,3,4,5,6,7,8,9]
 item2 = [12,13,14,15,16,17]
 item3 = [21,23,25,26,27,28]
-'''item1 = L.pop()              #last item #  # Incompatible types
-in assignment (expression has type "str", variable has type "list[int]")  [assignment]
+L = [41,23,65,26,97,28]
+item1 = L.pop()   
 item2 = L.pop(0)             #first item
-item3 = L.pop(5)             #sixth item'''
+item3 = L.pop(3)             #sixth item'''
 
 a = [1,2,3]
 b = a
@@ -126,12 +121,12 @@ print(t2)
 t1.insert(-9, 'k')
 print(t1)
 
-#Didn't really understand the pop() method.
+
 t1 = ["k", "a", "e", "i", "p", "q", "u"]
 ele1 = t1.pop(0)
 print(ele1)
-'''t1,remove("k")
-print(t1)# Not working for some reason'''
+t1.remove("a")
+print(t1)
 t1.reverse()
 print(t1)
 
@@ -139,7 +134,7 @@ t1 = ['b','d','c','a','f','h','e','g']
 t1.sort()
 print(t1)
 
-lst = eval(input("Enter list : "))
+lst = eval(input("ENTER list : "))
 length =len(lst)
 min_ele = lst[0]
 min_index = 0
@@ -150,7 +145,7 @@ for i in range(1, length) :
 print("Given list is : ", lst)
 print("The minimum element of the given list is :")
 print(min_ele, "at index", min_index)
-lst = eval(input("Enter list : "))
+lst = eval(input("ENTER LIST : "))
 length = len(lst)
 mean = sum = 0
 for i in range(0, length) :
@@ -167,20 +162,18 @@ for i in range(0, length) :
         break
 else :               # else of for loop
     print(element, "not found in given list")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+#11.6 Not working!
+print("***11.6***")    
+lst = eval(input("Enter list: "))
+lenght= len(lst)
+element = int(input("Enter element: "))
+count=0
+for i in range(0,lenght):
+    if element -- list[i]:
+        count += 1
+if count == 0 :
+    print(element, "not found in given list")
+else :
+    print(element, "has frequency as", count, "in given list")
 
