@@ -163,19 +163,19 @@ for i in range(0, length) :
 else :               # else of for loop
     print(element, "not found in given list")
     
-#11.6 Not working!
-'''print("***11.6***")    
+    
+#11.6
 lst = eval(input("Enter list: "))
 lenght= len(lst)
 element = int(input("Enter element: "))
 count=0
 for i in range(0,lenght):
-    if element -- list[i]:
+    if element == lst[i]:
         count += 1
 if count == 0 :
     print(element, "not found in given list")
 else :
-    print(element, "has frequency as", count, "in given list")'''
+    print(element,"has frequency as", count, "in given list")
 
 
 #11.7
