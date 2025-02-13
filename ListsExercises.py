@@ -164,7 +164,7 @@ else :               # else of for loop
     print(element, "not found in given list")
     
 #11.6 Not working!
-print("***11.6***")    
+'''print("***11.6***")    
 lst = eval(input("Enter list: "))
 lenght= len(lst)
 element = int(input("Enter element: "))
@@ -175,5 +175,35 @@ for i in range(0,lenght):
 if count == 0 :
     print(element, "not found in given list")
 else :
-    print(element, "has frequency as", count, "in given list")
+    print(element, "has frequency as", count, "in given list")'''
+
+
+#11.7
+lst = eval(input("Enter list: "))
+lenght = len(lst)
+uniq = []
+dupl = []
+count = i = 0
+while i < lenght:
+    element = lst[i]
+    count = 1
+    if element not in uniq and element not in dupl:
+        i += 1
+        for j in range(i, lenght):
+            if element == lst[j]:
+                count += 1
+        else:   # when inner loop - for loop ends
+            print("Element", element, "frequency:", count)
+            if count == 1:
+                uniq.append(element)
+            else:
+                dupl.append(element)
+    else: #when element is found in uniq or dupl lists
+        i += 1
+print("Original list", lst)
+print("Unique elements list", uniq)
+print("Duplicates elements list", dupl)
+        
+    
+
 
